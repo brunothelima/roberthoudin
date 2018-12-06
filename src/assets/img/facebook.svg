@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="17px" viewBox="0 0 10 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Facebook</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-1150.000000, -54.000000)" fill="#EEEEEE">
+            <g id="Header" transform="translate(696.000000, 41.000000)">
+                <g id="Right-Menu" transform="translate(342.000000, 7.000000)">
+                    <g id="Social" transform="translate(102.000000, 0.000000)">
+                        <g id="Facebook">
+                            <path d="M19.158,6.133 L19.158,8.926 L17.505,8.926 C16.896997,8.926 16.4853344,9.0526654 16.27,9.306 C16.0546656,9.5593346 15.947,9.9393308 15.947,10.446 L15.947,12.46 L19.063,12.46 L18.645,15.595 L15.947,15.595 L15.947,23 L12.698,23 L12.698,15.595 L10,15.595 L10,12.46 L12.698,12.46 L12.698,10.142 C12.698,8.82466008 13.0653297,7.80500361 13.8,7.083 C14.5346703,6.36099639 15.5163272,6 16.745,6 C17.7836719,6 18.5879971,6.04433289 19.158,6.133 Z" id="facebook"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

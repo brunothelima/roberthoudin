@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Wremena';
+    src: local('Wremena Bold'), local('Wremena-Bold'),
+        url('Wremena-Bold.woff2') format('woff2'),
+        url('Wremena-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Wremena';
+    src: local('Wremena'),
+        url('Wremena.woff2') format('woff2'),
+        url('Wremena.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

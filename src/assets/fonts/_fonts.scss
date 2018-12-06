@@ -1,0 +1,30 @@
+@font-face {
+	font-family: 'Ceria Lebaran';
+	src: url('assets/fonts/ceria-lebaran/ceria_lebaran-webfont.woff2') format('woff2'),
+			 url('assets/fonts/ceria-lebaran/ceria_lebaran-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Wremena';
+	src: local('Wremena Bold'), local('Wremena-Bold'),
+	  url('assets/fonts/wremena/Wremena-Bold.woff2') format('woff2'),
+	  url('assets/fonts/wremena/Wremena-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Wremena';
+	src: local('Wremena'),
+	  url('assets/fonts/wremena/Wremena.woff2') format('woff2'),
+	  url('assets/fonts/wremena/Wremena.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('assets/fonts/roboto-slab/robotoslab-regular-webfont.woff2') format('woff2'),
+       url('assets/fonts/roboto-slab/robotoslab-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
