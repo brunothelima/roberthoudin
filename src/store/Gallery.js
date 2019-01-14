@@ -16,7 +16,7 @@ const mutations = {
 
 const actions = {
 	getImages({commit}) {
-		let endpoint = '/roberthoudin/get_images.php';
+		let endpoint = 'http://localhost/roberthoudin/public/get_images.php';
 		return new Promise((resolve, reject) => {
 			fetch(endpoint, {
 				method: 'GET',

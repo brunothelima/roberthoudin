@@ -1,8 +1,11 @@
 <template>
   <div class="panel">
-    <div class="panel__wrapper" v-if="ready">
+    <div class="panel__wrapper">
   		<swiper ref="slider" :options="sliderOptions">
   			<swiper-slide class="panel__bird"> <v-svg :src="require('@/assets/img/bird-1.svg')" /></swiper-slide>
+        <swiper-slide class="video">
+            <iframe id="iframe" src="https://www.youtube.com/embed/G1ggZwQauQw" scrolling="no" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </swiper-slide>
   			<swiper-slide v-for="(group, gIndex) in images" :key="gIndex">
   	  		<ul>
   	  			<li v-for="(image, iIndex) in group" :key="iIndex" 
@@ -31,6 +34,8 @@ import SvgLoader from '@/components/SvgLoader';
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
 
+var intervall;
+
 export default {
   name: 'GalleryPanel', 
   components: {
@@ -48,11 +53,10 @@ export default {
   },
   data() {
   	return {
-      ready: false,
+      flag: 'a',
 			sliderOptions: {
 			  slidesPerView: 'auto',
 			  freeMode: true,
-			  preloadImages: false,
         spaceBetween: 8,
 			  lazy: true,
 			  watchSlidesVisibility: true,
@@ -65,14 +69,27 @@ export default {
 			  	draggable: true,
 			  	reverse: true,
 			  },
-			},
-  	};
+        on: {
+          progress() {
+            console.log('none');
+            document.getElementById('iframe').style['pointer-events'] = 'none';
+            clearTimeout(intervall)
+            intervall = setTimeout(() => {
+              document.getElementById('iframe').style['pointer-events'] = 'all';
+              console.log('all');
+            }, 250);
+          },
+        }
+        // on: {
+        // },
+      },
+    };
   },
   mounted() {
-	  Vue.set(this.sliderOptions.scrollbar, 'el', this.$refs.scrollbar);
-	  setTimeout(() => {
-	    this.ready = true;
-	  }, 100);
+    Vue.set(this.sliderOptions.scrollbar, 'el', this.$refs.scrollbar);
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 1000);
 	},
 };
 </script>
@@ -129,6 +146,22 @@ export default {
   }
   .swiper-wrapper {
   	overflow: visible;
+    // height: 70vh;
+    .swiper-slide.video {
+      // position: relative;
+      // padding-bottom: 56%;
+      // margin: $gutter * 4 0;
+      // box-sizing: border-box;
+      width: 100% !important;
+      max-width: 1024px !important;
+      iframe {
+        // position: absolute;
+        // left: 0; top: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+      }
+    }
     > .swiper-slide {
       width: 33.33%;
       height: 70vh;
